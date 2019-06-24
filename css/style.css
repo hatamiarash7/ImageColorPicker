@@ -3,7 +3,7 @@
     background-color: #eee;
     width: 100%;
     cursor: none;
-    /* height: 100vw/1.77; */
+    border-radius: 15px;
 }
 
 #cursor {
@@ -15,8 +15,7 @@
     width: 140px;
     height: 140px;
     opacity: 0;
-    border: 34px solid;
-    border-color: #fff;
+    border: 34px solid #fff;
     border-radius: 50%;
     pointer-events: none;
     transform: scale(0.4);
@@ -33,21 +32,17 @@
     display: inline;
     width: 18px;
     height: 18px;
-    border: 4px solid;
-    border-color: #fff;
+    border: 4px solid #fff;
     opacity: 0.7;
     border-radius: 50%;
-    transition: 0.15s transform border-width;
+    transition: 0.15s transform;
 }
 
 #cursor.touched::before {
     transform: scale(4.1);
     border-width: 7px;
-    /* width: 62px; */
-    /* height: 62px; */
-    transition: 0.15s transform border-width;
+    transition: 0.15s transform;
 }
-
 
 .container {
     width: 90%;
@@ -58,6 +53,8 @@
     width: 100%;
     height: 150px;
     background-color: #3f51b5;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .card {
@@ -69,7 +66,7 @@ tr {
 }
 
 td {
-    padding:5px;
+    padding: 5px;
     font-size: 1.2em;
     font-weight: bold;
 }
@@ -84,4 +81,8 @@ td:first-child {
     opacity: 0.1;
     top: -2em;
     font-size: 0.3em;
+}
+
+.card {
+    border-radius: 15px;
 }
