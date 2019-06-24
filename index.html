@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+    *                                                           *
+    *              Developed By : A.Hatami                      *
+    *                                                           *
+    *          Website : http://arash-hatami.ir                 *
+    *                                                           *
+    *           Email : hatamiarash7@gmail.com                  *
+    *                                                           *
+    *              Phone : +98 918 218 0519                     *
+    *                                                           *
+    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Color Picker</title>
+    <meta name="description" content="Extract a color name from an image.">
+    <meta name="keywords" content="color, picker, image, name, extract, named color, colorname, color name">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/materialize.min.js"></script>
+    <script src="js/colornames.umd.js"></script>
+    <script src="js/nearestColor.js"></script>
+</head>
+<body>
+<div id="cursor"></div>
+<div class="container">
+    <div class="row">
+        <h1>Image Color Picker <sup class="temptitle">A.Hatami</sup></h1>
+        <p>Purpose of this web app is to extract a named color from an image. It"s relies on <a
+            href="https://github.com/meodai/color-names">meodai/color-names</a>
+            and <a href="https://github.com/dtao/nearest-color">dtao/nearest-color</a> libraries to name a color.
+            Developed by <a href="https://github.com/hatamiarash7">Arash Hatami</a>.</p>
+    </div>
+    <div class="row">
+        <div class="col s6">
+            <div class="file-field input-field">
+                <div class="btn indigo">
+                    <span>Choose an image</span>
+                    <input type="file" id="chooseBtn">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" placeholder="default.jpg" type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s10">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="col s2">
+            <div class="card">
+                <div class="card-image">
+                    <div id="colorView"></div>
+                    <span class="card-title">Click on the image</span>
+                </div>
+                <div class="card-content">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>#</td>
+                            <td id="Hex"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>R</td>
+                            <td id="R"></td>
+                        </tr>
+                        <tr>
+                            <td>G</td>
+                            <td id="G"></td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td id="B"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>H</td>
+                            <td id="H"></td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td id="S"></td>
+                        </tr>
+                        <tr>
+                            <td>V</td>
+                            <td id="V"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td id="C"></td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td id="M"></td>
+                        </tr>
+                        <tr>
+                            <td>Y</td>
+                            <td id="Y"></td>
+                        </tr>
+                        <tr>
+                            <td>K</td>
+                            <td id="K"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="module" src="js/script.js"></script>
+</body>
+</html>
